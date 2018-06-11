@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for jianshu project
+# Scrapy settings for Ithome project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,19 +9,19 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'jianshu'
+BOT_NAME = 'ithome'
 
-SPIDER_MODULES = ['jianshu.spiders']
-NEWSPIDER_MODULE = 'jianshu.spiders'
+SPIDER_MODULES = ['ithome.spiders']
+NEWSPIDER_MODULE = 'ithome.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'jianshu (+http://www.yourdomain.com)'
+#USER_AGENT = 'Ithome (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
-FEED_URI = u'/Documents/jianshu-hot.csv'
+FEED_URI = u'/Documents/ithome-hot.csv'
 FEED_FORMAT = 'CSV'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
@@ -56,13 +56,13 @@ COOKIES_ENABLED = False
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'jianshu.middlewares.JianshuSpiderMiddleware': 543,
+#    'Ithome.middlewares.Ithome': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'jianshu.middlewares.JianshuDownloaderMiddleware': 543,
+#    'Ithome.middlewares.IthomeDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -74,7 +74,7 @@ COOKIES_ENABLED = False
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'jianshu.pipelines.JianshuPipeline': 300,
+   'ithome.pipelines.IthomePipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

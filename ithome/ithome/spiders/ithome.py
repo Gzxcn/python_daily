@@ -3,12 +3,12 @@ import scrapy
 from scrapy.spiders import CrawlSpider
 from scrapy.selector import Selector
 from scrapy.http import Request
-from ithome.items import JianshuItem
+from ithome.items import IthomeItem
 
 import urllib
 
 
-class Jianshu(CrawlSpider):
+class Ithome(CrawlSpider):
     name = 'ithome'   # 运行时这个爬虫的名字
     start_urls = ['https://www.ithome.com/']
     url = 'https://www.ithome.com/'
@@ -39,7 +39,7 @@ class Jianshu(CrawlSpider):
     #     "pgv_si": "s3103722496"
     # } 
     def parse(self, response) :
-        item = JianshuItem()
+        item = IthomeItem()
         selector = Selector(response)
 
         articles = selector.xpath("//div[@class='block 8250 new-list-1']/ul")
@@ -70,7 +70,7 @@ class Jianshu(CrawlSpider):
 
     def real_parse(self, response) :
         
-        item = JianshuItem()
+        item = IthomeItem()
         selector = Selector(response)
         # article = selector.xpath("//div[@class='content fl']").extract()
         article = selector.xpath("//div[@class='content fl']/div[1]")
